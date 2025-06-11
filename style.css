@@ -352,3 +352,49 @@ footer {
   margin-bottom: 12px;
   padding-left: 8px;
 }
+
+/* Container for image and tip overlay */
+.img-container {
+  position: relative;
+  width: 100%;
+  /* Prevent image from shrinking when overlay appears */
+  min-height: 160px;
+}
+
+/* Tip overlay hidden by default */
+.img-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(76, 229, 255, 0.92); /* semi-transparent baby blue */
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  font-size: 1em;
+  border-radius: 12px;
+  padding: 16px;
+  transition: opacity 0.3s;
+  pointer-events: none; /* Prevent accidental clicks */
+  /* Do not affect the image size */
+  box-sizing: border-box;
+}
+
+/* Show tip overlay on hover, but do not scale or move the image */
+.img-container:hover .img-tip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Prevent image from scaling on hover when showing tips */
+.cool-hover img {
+  transition: none;
+}
+.cool-hover:hover img {
+  transform: none;
+  filter: none;
+}
