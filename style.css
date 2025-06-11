@@ -26,8 +26,8 @@ body {
 /* Individual card styles */
 .card {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   padding: 16px;
   max-width: 320px;
   width: 100%;
@@ -43,7 +43,7 @@ body {
 /* Card image styles */
 .card img {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 12px;
   height: 160px;
   object-fit: cover;
   margin-bottom: 12px;
@@ -61,11 +61,19 @@ body {
   color: #444;
 }
 
-/* Desktop layout: cards align horizontally */
+/* Desktop layout: show 3 cards per row, wrap extra cards to next line */
 @media (min-width: 700px) {
   .cards {
     flex-direction: row; /* cards side by side */
     justify-content: center;
+    flex-wrap: wrap; /* allow cards to wrap to next line */
+    max-width: 1100px; /* optional: limit width for better appearance */
+    margin: 0 auto;
+  }
+  .card {
+    flex: 1 1 300px; /* allow cards to grow and shrink, base width 300px */
+    max-width: 320px;
+    margin: 12px;
   }
 }
 
@@ -113,18 +121,22 @@ body {
 /* Call-to-action button style */
 .cta-button {
   display: inline-block;
-  background: #ffeb3b;
-  color: #333;
+  background: linear-gradient(90deg, #00e676 0%, #00bcd4 100%);
+  color: #fff;
   padding: 12px 28px;
   border-radius: 24px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
   transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,188,212,0.15);
+  border: none;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
-  background: #ffe082;
+  background: linear-gradient(90deg, #00bcd4 0%, #00e676 100%);
+  color: #222;
 }
 
 /* Call-to-Action section styles */
@@ -201,7 +213,7 @@ img {
 
 /* Navigation bar styles */
 nav {
-  background-color: #388e3c; /* Green background */
+  background-color: #b3e5fc; /* Light baby blue background */
   padding: 16px 0;
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space between logo and links */
@@ -211,7 +223,7 @@ nav {
 
 /* Logo style */
 .logo {
-  color: #fff;
+  color: #000; /* Black text for logo */
   font-size: 1.5em;
   font-weight: bold;
   margin-left: 24px; /* Add some space on the left */
@@ -235,7 +247,7 @@ nav ul li {
 
 /* Style the links */
 nav ul li a {
-  color: #fff;
+  color: #000; /* Black text for nav links */
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
@@ -248,10 +260,95 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-  background-color: #388e3c; /* Same green as header */
-  color: #fff;
+  background-color: #b3e5fc; /* Same light baby blue as header */
+  color: #000; /* Black text for footer */
   text-align: center;
   padding: 16px 0;
   margin-top: 32px;
   font-size: 1em;
+}
+
+/* Fly-in animation for sections */
+.fly-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: flyIn 1s forwards;
+}
+.fly-in:nth-of-type(2) { animation-delay: 0.2s; }
+.fly-in:nth-of-type(3) { animation-delay: 0.4s; }
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modern card hover effect for youth: glow, image zoom, shadow */
+.cool-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.cool-hover:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 rgba(0,255,128,0.25), 0 2px 8px rgba(0,0,0,0.12);
+  border: 2px solid #00e676;
+}
+.cool-hover img {
+  transition: transform 0.4s;
+}
+.cool-hover:hover img {
+  transform: scale(1.12) rotate(2deg);
+  filter: brightness(1.1) saturate(1.2);
+}
+/* Add a colorful glow behind the card on hover */
+.cool-hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 50%; top: 50%;
+  width: 120%; height: 120%;
+  background: radial-gradient(circle, #00e67655 0%, #fff0 80%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.cool-hover:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Tips section styles */
+.tips-section {
+  background: #f0fff4; /* Very light green */
+  padding: 32px 16px;
+  margin: 24px 0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* Tips section headline */
+.tips-section h2 {
+  color: #009688;
+  margin-bottom: 18px;
+  font-size: 1.5em;
+}
+
+/* Tips list styles - no bullet points */
+.tips-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  color: #333;
+  font-size: 1.1em;
+}
+
+/* Each tip styled as a simple line */
+.tips-list .tip {
+  margin-bottom: 12px;
+  padding-left: 8px;
 }

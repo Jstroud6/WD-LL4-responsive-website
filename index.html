@@ -18,74 +18,137 @@
     <div class="logo">Sustainable Travel</div>
     <!-- Navigation links -->
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Destinations</a></li>
-      <li><a href="#">Tips</a></li>
-      <li><a href="#">Contacts</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#contacts">Contacts</a></li>
     </ul>
   </nav>
 
-  <!-- Hero section -->
-  <section class="hero">
-    <!-- Headline for the hero section -->
-    <h1>Explore Sustainable Travel</h1>
-    <!-- Subtext for the hero section -->
-    <p class="hero-subtext">
-      Discover eco-friendly destinations and tips to make your travels better for the planet. Join us in making a positive impact while exploring beautiful places!
-    </p>
-    <!-- Call-to-action button -->
-    <a href="#" class="cta-button">Start Your Journey</a>
-    <!-- The background image will be set in CSS, so we remove the <img> tag -->
-  </section>
+  <!-- Main wrapper for fly-in animation -->
+  <main>
+    <!-- Hero section with fly-in effect -->
+    <section class="hero fly-in" id="home">
+      <!-- Headline for the hero section -->
+      <h1>Explore Sustainable Travel</h1>
+      <!-- Subtext for the hero section -->
+      <p class="hero-subtext">
+        Discover eco-friendly destinations and tips to make your travels better for the planet. Join us in making a positive impact while exploring beautiful places!
+      </p>
+      <!-- Call-to-action button -->
+      <a href="#" class="cta-button">Start Your Journey</a>
+    </section>
 
-  <!-- Eco-friendly Destinations Section -->
-  <section class="destinations">
-    <!-- Section headline -->
-    <h2>Eco-Friendly Destinations</h2>
-    <!-- Cards container -->
-    <div class="cards">
-      <!-- Card 1 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Costa Rica rainforest">
-        <!-- Destination name as a clickable link -->
-        <h3>
-          <a href="https://www.visitcostarica.com/en" target="_blank" rel="noopener">
-            Costa Rica
-          </a>
-        </h3>
-        <p>Experience lush rainforests, wildlife, and eco-lodges in this sustainable paradise.</p>
+    <!-- Eco-friendly Destinations Section with fly-in effect -->
+    <section class="destinations fly-in" id="destinations">
+      <!-- Section headline -->
+      <h2>Eco-Friendly Destinations</h2>
+      <!-- Cards container -->
+      <div class="cards">
+        <!-- Card 1: Costa Rica -->
+        <div class="card cool-hover">
+          <!-- Photo of Costa Rica (Arenal Volcano) -->
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Arenal Volcano, Costa Rica">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://www.visitcostarica.com/en" target="_blank" rel="noopener">
+              Costa Rica
+            </a>
+          </h3>
+          <p>Experience lush rainforests, wildlife, and eco-lodges in this sustainable paradise.</p>
+        </div>
+        <!-- Card 2: Norwegian Fjords -->
+        <div class="card cool-hover">
+          <!-- Photo of Norwegian Fjords (Geirangerfjord) -->
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Geirangerfjord, Norway">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://www.visitnorway.com/places-to-go/fjord-norway/" target="_blank" rel="noopener">
+              Norwegian Fjords
+            </a>
+          </h3>
+          <p>Explore breathtaking fjords and enjoy green travel options in Norway.</p>
+        </div>
+        <!-- Card 3: New Zealand -->
+        <div class="card cool-hover">
+          <!-- Photo of New Zealand (Milford Sound) -->
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Milford Sound, New Zealand">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://www.newzealand.com/int/" target="_blank" rel="noopener">
+              New Zealand
+            </a>
+          </h3>
+          <p>Discover eco-tours, clean energy, and stunning nature in New Zealand.</p>
+        </div>
+        <!-- Card 4: Japan -->
+        <div class="card cool-hover">
+          <!-- Photo of Japan (Mount Fuji) -->
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mount Fuji, Japan">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://www.japan.travel/en/" target="_blank" rel="noopener">
+              Japan
+            </a>
+          </h3>
+          <p>Enjoy cherry blossoms, clean cities, and eco-friendly transport in Japan.</p>
+        </div>
+        <!-- Card 5: Iceland -->
+        <div class="card cool-hover">
+          <!-- Photo of Iceland (Seljalandsfoss Waterfall) -->
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=80" alt="Seljalandsfoss Waterfall, Iceland">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://visiticeland.com/" target="_blank" rel="noopener">
+              Iceland
+            </a>
+          </h3>
+          <p>See waterfalls, volcanoes, and geothermal wonders in eco-conscious Iceland.</p>
+        </div>
+        <!-- Card 6: Australia -->
+        <div class="card cool-hover">
+          <!-- Photo of Australia (Great Barrier Reef) -->
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Great Barrier Reef, Australia">
+          <!-- Destination name as a clickable link -->
+          <h3>
+            <a href="https://www.australia.com/en" target="_blank" rel="noopener">
+              Australia
+            </a>
+          </h3>
+          <p>Explore the Great Barrier Reef and national parks with a focus on sustainability.</p>
+        </div>
       </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Norwegian fjords">
-        <!-- Destination name as a clickable link -->
-        <h3>
-          <a href="https://www.visitnorway.com/places-to-go/fjord-norway/" target="_blank" rel="noopener">
-            Norwegian Fjords
-          </a>
-        </h3>
-        <p>Explore breathtaking fjords and enjoy green travel options in Norway.</p>
-      </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="New Zealand mountains">
-        <!-- Destination name as a clickable link -->
-        <h3>
-          <a href="https://www.newzealand.com/int/" target="_blank" rel="noopener">
-            New Zealand
-          </a>
-        </h3>
-        <p>Discover eco-tours, clean energy, and stunning nature in New Zealand.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Call-to-Action Section -->
-  <section class="cta-section">
-    <!-- Message encouraging users to take action -->
-    <p>Ready to make your next adventure eco-friendly?</p>
-    <!-- CTA button -->
-    <a href="#" class="cta-button">Plan Your Trip</a>
+    <!-- Eco-Friendly Travel Tips Section -->
+    <section class="tips-section fly-in" id="tips">
+      <!-- Section headline -->
+      <h2>Eco-Friendly Travel Tips</h2>
+      <!-- List of tips without bullet points -->
+      <div class="tips-list">
+        <div class="tip">1. Bring a reusable water bottle and shopping bag.</div>
+        <div class="tip">2. Use public transportation, bike, or walk when possible.</div>
+        <div class="tip">3. Choose eco-friendly accommodations and tours.</div>
+        <div class="tip">4. Respect local wildlife and natural habitats.</div>
+        <div class="tip">5. Reduce waste by avoiding single-use plastics.</div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section fly-in">
+      <!-- Message encouraging users to take action -->
+      <p>Ready to make your next adventure eco-friendly?</p>
+      <!-- CTA button -->
+      <a href="#" class="cta-button">Plan Your Trip</a>
+    </section>
+  </main>
+
+  <!-- Add a contacts section for the Contacts link -->
+  <section id="contacts" style="background:#f5f5f5; text-align:center; padding:32px 16px;">
+    <!-- Simple contacts info for beginners -->
+    <h2>Contact Us</h2>
+    <p>Email: info@sustainabletravel.com</p>
+    <p>Instagram: @sustainabletravel</p>
   </section>
 
   <script src="script.js"></script>
