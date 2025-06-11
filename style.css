@@ -1,3 +1,8 @@
+/* Use Roboto font for the whole website */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
 /* Destinations section styles */
 .destinations {
   padding: 24px 16px;
@@ -27,6 +32,12 @@
   max-width: 320px;
   width: 100%;
   text-align: center;
+}
+
+/* Add a simple hover effect to cards */
+.card:hover {
+  transform: scale(1.05); /* Make the card slightly bigger */
+  transition: transform 0.3s; /* Smooth transition */
 }
 
 /* Card image styles */
@@ -186,4 +197,61 @@ img {
   .cards {
     gap: 12px;
   }
+}
+
+/* Navigation bar styles */
+nav {
+  background-color: #388e3c; /* Green background */
+  padding: 16px 0;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Vertically center items */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Logo style */
+.logo {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 24px; /* Add some space on the left */
+  margin-bottom: 0; /* Remove bottom margin for flex layout */
+  text-align: left;
+}
+
+/* Navigation links container */
+nav ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0 24px 0 0; /* Add some space on the right */
+  text-align: center;
+}
+
+/* Make navigation links inline */
+nav ul li {
+  display: inline; /* Display links in a row */
+  margin: 0 12px;  /* Space between links */
+}
+
+/* Style the links */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b; /* Highlight on hover */
+}
+
+/* Footer styles */
+footer {
+  background-color: #388e3c; /* Same green as header */
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 32px;
+  font-size: 1em;
 }
