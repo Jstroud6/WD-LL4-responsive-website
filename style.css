@@ -1,0 +1,189 @@
+/* Destinations section styles */
+.destinations {
+  padding: 24px 16px;
+  background-color: #f5f5f5;
+}
+
+/* Section headline */
+.destinations h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cards container - mobile: stacked vertically */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* space between cards */
+  align-items: center;
+}
+
+/* Individual card styles */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 16px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Card image styles */
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Card title */
+.card h3 {
+  margin: 10px 0 8px 0;
+  font-size: 1.2em;
+}
+
+/* Card description */
+.card p {
+  font-size: 1em;
+  color: #444;
+}
+
+/* Desktop layout: cards align horizontally */
+@media (min-width: 700px) {
+  .cards {
+    flex-direction: row; /* cards side by side */
+    justify-content: center;
+  }
+}
+
+/* Hero section styles */
+.hero {
+  /* Add a background image and color overlay */
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
+  background-size: cover; /* Make image cover the whole section */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #4caf50; /* Fallback color */
+  color: #fff; /* White text for contrast */
+  text-align: center; /* Center the text */
+  padding: 60px 16px 60px 16px; /* Space above and below */
+  position: relative;
+}
+
+/* Add a semi-transparent overlay for better text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+  z-index: 0;
+}
+
+/* Make sure hero content is above the overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headline style */
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 16px;
+}
+
+/* Subtext style */
+.hero-subtext {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+/* Call-to-action button style */
+.cta-button {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #333;
+  padding: 12px 28px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background: #ffe082;
+}
+
+/* Call-to-Action section styles */
+.cta-section {
+  background: #e8f5e9; /* Light green background */
+  text-align: center;
+  padding: 32px 16px;
+  margin-top: 24px;
+}
+
+/* CTA section message style */
+.cta-section p {
+  font-size: 1.3em;
+  margin-bottom: 18px;
+  color: #2e7d32;
+}
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive design for screens 600px and wider */
+@media (min-width: 600px) {
+  /* Add more padding to the hero and destinations sections */
+  .hero {
+    padding: 100px 0;
+  }
+  .destinations {
+    padding: 40px 0;
+  }
+  /* Increase card max-width for larger screens */
+  .card {
+    max-width: 350px;
+  }
+  /* Increase hero headline size */
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  /* Increase spacing in hero subtext */
+  .hero-subtext {
+    font-size: 1.2em;
+    margin-bottom: 32px;
+  }
+  /* Increase gap between cards */
+  .cards {
+    gap: 24px;
+  }
+}
+
+/* Extra responsive styles for screens up to 768px wide */
+@media (max-width: 768px) {
+  /* Reduce hero section padding for smaller screens */
+  .hero {
+    padding: 40px 8px;
+  }
+  /* Reduce card padding and image height for smaller screens */
+  .card {
+    padding: 12px;
+  }
+  .card img {
+    height: 120px;
+  }
+  /* Make headline a bit smaller */
+  .hero h1 {
+    font-size: 1.5em;
+  }
+  /* Reduce gap between cards */
+  .cards {
+    gap: 12px;
+  }
+}
